@@ -17,7 +17,6 @@ public func twoSum(numbers: [Int], target: Int) -> [Int] {
     var res = [Int]()
     res.reserveCapacity(2)
     for index in 0...numbers.count - 1 {
-        // Xcode 10.2.1 上编译正常通过，但是在LeetCode中国的网站上会编译报错
         if let num = numberCache[target - numbers[index]] {
             res.append(num)
             res.append(index)
